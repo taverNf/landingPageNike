@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&family=Saira+Extra+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+body {
+  font-family: 'parkinsans', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  overflow-x: hidden;
+}
+
+
+.banner {
+  position: relative;
+  height: 80vh;
+  background: linear-gradient(to bottom, transparent, transparent, #000a), url('https://hpg.com.br/wp-content/uploads/2024/04/o-que-significa-just-do-it-da-nike-saiba-traducao.png') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+.banner .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+  animation: fadeIn 2s ease-in-out;
+
+  & h1{
+    font-family: 'saira extra condensed', impact, sans-serif;
+    font-weight: 900;
+    font-size: 5rem;
+    text-transform: uppercase;
+  }
+}
+
+.swoosh{
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  height: 10vh;
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo{
+  width: 100px;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Seção do formulário */
+.form-section {
+  padding: 0 30vw;
+  background: linear-gradient(to top, #0007, transparent, #000a), url('https://mir-s3-cdn-cf.behance.net/project_modules/1400/1f56ef20563775.580dcf35742fe.jpg') no-repeat center center/cover;
+  min-height: 120vh;
+  text-align: center;
+}
+
+.form-section h2 {
+  font-family: 'saira extra condensed', impact, sans-serif;
+  font-weight: 900;
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.promo-form {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  gap: 2rem;
+
+  background-color: #fff;
+}
+
+.input-box{
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+  & label{
+    color: #000;
+    font-weight: bold;
+    font-size: 2rem;
+    font-family: 'saira extra condensed', impact, sans-serif;
+  }
+
+  & input{
+    width: 100%;
+    height: 4rem;
+    padding-left: 1rem;
+
+    font-family: 'parkinsans', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+
+    background-color: #eee;
+    border: 3px solid transparent;
+    border-radius: .75rem;
+
+    transition: .3s;
+
+    &:focus-visible{
+      outline: none;
+      border-color: #222;
+    }
+  }
+}
+
+.select-box{
+  width: 100%;
+
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: .75rem;
+
+  font-size: 2rem;
+  font-weight: bolder;
+  font-family: 'saira extra condensed', impact, sans-serif;
+  text-transform: uppercase;
+
+  & input[type = "checkbox"]{
+    height: 24px;
+    width: 24px;
+    filter: saturate(0);
+  }
+
+  & p{
+    color: #000;
+  }
+}
+
+.promo-form button {
+  width: 100%;
+
+  padding: 1rem 0;
+  margin-top: 2rem;
+
+  font-family: 'saira extra condensed';
+  font-weight: bolder;
+  font-size: 2rem;
+  text-transform: uppercase;
+
+  background-color: #111;
+  border-radius: .75rem;
+  border: none;
+  color: #fff;
+
+  cursor: pointer;
+}
+
+.promo-form button:hover {
+  background: #000;
+}
+
+@media (max-width: 768px) {
+  .banner {
+    height: 40vh;
+  }
+
+  .banner-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .banner-content p {
+    font-size: 1rem;
+  }
+
+  /* Ajusta o formulário */
+  .form-section{
+    padding: 0;
+  }
+  .promo-form {
+    width: 100%;
+  }
+
+  .promo-form button {
+    font-size: 0.9rem;
+  }
+}
